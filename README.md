@@ -1,38 +1,35 @@
-© 2013, Praveen Kumar Pendyala.
-Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license,
+Author
+----------------------
+Praveen Kumar Pendyala <praveen@praveenkumar.co.in> <praveendath92@gmail.com>
+http://praveenkumar.co.in
+
+
+License
+----------------------
+Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 
+Unported license.
+
+Read the complete license at,
 http://creativecommons.org/licenses/by-nc-sa/3.0/
 
-This source code is made available to facilitate easy porting and as an aid to the developers from universities/schools whose Moodle is not/partially supported by the current MDroid.
 
-However, you can use this code, modify it to your own needs - Add/remove functionalities, squash few bugs, with a condition that a proper credit given to the original developer - Yeah that's me, Praveen Pendyala.
-
-Though not compulsively required, it is expected that you inform the above mentioned original developer about the work you derived/deriving from this.
-
-Also, it is expected as matter of ethics that your work, if heavily dervied from this, is also made available publicly.
-
-
-And in any case, Where ever the original file(s) - one(s) contained in this thread is(are) modified it is mandatory to add the below lines.
-
-
------------------------------------------------------------------------------
------------------------------------------------------------------------------
-
-/************************************************************************************************
-
-© 2013, Praveen Kumar Pendyala.
-Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license,
-http://creativecommons.org/licenses/by-nc-sa/3.0/ Thank you.
-
-This work is derived from MDroid, a work by Praveen Kumar Pendyala.
-
-Source code: https://github.com/praveendath92/MDroid
+Version 4.0
+----------------------
+This is second approach used for work on MDroid. We used seperate classes for
+Activities, parsing, network operations and other helper tasks. The UI has been
+completely redesigned. This version only reproduces the functionality of the 
+previous approach on a new design and well organised classes. The next release
+would contain notifications service. Until this point, there were no background
+services, whatso ever, run by MDroid. However, the notifications services would
+be running background services so, that development will be continued on a 
+differnet branch.
 
 
-All further dervied versions of this code MUST also contain these lines.
+Development
+----------------------
+This branch is stalled and there won't be any future development on this branch.
+If you wish to develop upon this, I strongly recommend you to check the newer 
+versions. Version 5.0 branch could be a good alternative if you can go with 
+having background services. If not, you may use this version as your point of
+development.
 
-You may be allowed to modify this notice and/or licenseing with original author's consent.
-
-***************************************************************************************************/
-
------------------------------------------------------------------------------
------------------------------------------------------------------------------
