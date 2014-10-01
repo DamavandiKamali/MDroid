@@ -44,7 +44,7 @@ public class DoLogin {
 	static DefaultHttpClient httpclient;
 	static Boolean isLogged = false;
 	static String htmlData = "";
-	static Boolean webservices = false;
+	Boolean webservices = false;
 
 	CookieStore cookieStore;
 	String getCookie;
@@ -94,7 +94,7 @@ public class DoLogin {
 		try {
 			// Check webservices first
 			MoodleRestToken mrt = new MoodleRestToken(uName, pswd, mURL);
-			if (mrt.getToken() != null)
+			if (mrt.getToken().getToken() != null)
 				webservices = true;
 			else
 				webservices = false;
@@ -182,6 +182,10 @@ public class DoLogin {
 			errVal = 2;
 
 		return errVal;
+	}
+	
+	public Boolean webservicesEnabled(){
+		return webservices;
 	}
 
 }
