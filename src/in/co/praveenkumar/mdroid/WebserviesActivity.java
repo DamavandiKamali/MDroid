@@ -3,6 +3,7 @@ package in.co.praveenkumar.mdroid;
 import in.co.praveenkumar.R;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -31,7 +32,15 @@ public class WebserviesActivity extends Activity {
 	}
 
 	public void showAPIs(View v) {
-		System.out.println("Sure !");
+		final String appPackageName = "in.co.praveenkumar.mdroid.legacy";
+		try {
+			startActivity(new Intent(Intent.ACTION_VIEW,
+					Uri.parse("market://details?id=" + appPackageName)));
+		} catch (android.content.ActivityNotFoundException anfe) {
+			startActivity(new Intent(Intent.ACTION_VIEW,
+					Uri.parse("http://play.google.com/store/apps/details?id="
+							+ appPackageName)));
+		}
 	}
 
 	public void skipToCourse(View v) {
