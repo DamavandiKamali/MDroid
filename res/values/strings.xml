@@ -4,8 +4,8 @@
     <string name="app_name">MDroid</string>
 
     <!-- Webservices -->
-    <string name="webservices_text">Webservices detected on your server. We <b>strongly recommend</b> using our MDroid APIs version for you. We have many additional features and will be replacing this version for that in future.</string>
-    <string name="webservices_features">- Login without password \n- Multiple accounts \n- Beautiful interface \n- Forums \n- Discussions \n- Topics \n- Messaging \n- Calender \n- View any modules</string>
+    <string name="webservices_text">Webservices detected on your server. We <b>strongly recommend</b> using our MDroid APIs version for you.</string>
+    <string name="webservices_features">Features:\n- Login without password \n- Multiple accounts \n- Beautiful interface \n- Forums \n- Discussions \n- Topics \n- Messaging \n- Calender \n- View any module types</string>
 
     <!-- Menu -->
     <string name="menu_settings">Settings</string>
