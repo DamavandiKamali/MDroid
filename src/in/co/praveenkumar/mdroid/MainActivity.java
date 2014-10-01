@@ -3,7 +3,7 @@
  * Project: MDroid
  * Created:	28-12-2013
  * 
- * © 2013, Praveen Kumar Pendyala. 
+ * ï¿½ 2013, Praveen Kumar Pendyala. 
  * Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 
  * 3.0 Unported license, http://creativecommons.org/licenses/by-nc-sa/3.0/ 
  * 
@@ -38,11 +38,11 @@ import android.widget.EditText;
 
 public class MainActivity extends BaseActivity {
 	private final String DEBUG_TAG = "MDroid Main activity";
-	
+
 	public static String mURL;
 	public static DefaultHttpClient httpclient;
 	public static Toaster toaster;
-	
+
 	private EditText uNameET;
 	private EditText pswdET;
 	private Database db;
@@ -65,7 +65,7 @@ public class MainActivity extends BaseActivity {
 		LayoutInflater inflater = getLayoutInflater();
 		View layout = inflater.inflate(R.layout.toast_layout,
 				(ViewGroup) findViewById(R.id.toast_layout_root));
-		toaster = new Toaster(getApplicationContext(), layout);		
+		toaster = new Toaster(getApplicationContext(), layout);
 
 		// Setup widgets and their values
 		uNameET = (EditText) findViewById(R.id.username);
@@ -163,9 +163,15 @@ public class MainActivity extends BaseActivity {
 	private void checkLogin(int respCode) {
 		if (l.isLoggedIn()) {
 			// Intent with courses
-			Intent i = new Intent(this, CoursesActivity.class);
-			i.putExtra("html", l.getContent());
-			startActivityForResult(i, 1);
+			if (!l.webservicesEnabled()) {
+				Intent i = new Intent(this, CoursesActivity.class);
+				i.putExtra("html", l.getContent());
+				startActivityForResult(i, 1);
+			} else {
+				Intent i = new Intent(this, WebserviesActivity.class);
+				i.putExtra("html", l.getContent());
+				startActivityForResult(i, 1);
+			}
 		} else {
 			switch (respCode) {
 			case 0:
@@ -175,9 +181,15 @@ public class MainActivity extends BaseActivity {
 					// Intent with error code.
 					toaster.showToast("Login failed. Error code: "
 							+ l.getLoginError());
-					Intent i = new Intent(this, ErrorActivity.class);
-					i.putExtra("errCode", l.getLoginError());
-					startActivityForResult(i, 1);
+					if (!l.webservicesEnabled()) {
+						Intent i = new Intent(this, ErrorActivity.class);
+						i.putExtra("errCode", l.getLoginError());
+						startActivityForResult(i, 1);
+					} else {
+						Intent i = new Intent(this, WebserviesActivity.class);
+						i.putExtra("errCode", l.getLoginError());
+						startActivityForResult(i, 1);
+					}
 				}
 
 				break;
