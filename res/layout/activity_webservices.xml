@@ -42,31 +42,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:orientation="horizontal" >
 
             <Button
-                android:layout_width="150dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="16dp"
                 android:background="@drawable/white_btn_bg"
                 android:gravity="center"
                 android:onClick="skipToCourse"
+                android:padding="8dp"
                 android:text="Later"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <Button
-                android:layout_width="150dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="16dp"
                 android:background="@drawable/white_btn_bg"
                 android:gravity="center"
                 android:onClick="showAPIs"
+                android:padding="8dp"
                 android:text="Show me"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </RelativeLayout>
     </LinearLayout>
 
