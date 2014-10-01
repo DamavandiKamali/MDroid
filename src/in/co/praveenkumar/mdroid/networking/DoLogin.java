@@ -3,7 +3,7 @@
  * Project: MDroid
  * Created:	28-12-2013
  * 
- * © 2013, Praveen Kumar Pendyala. 
+ * ï¿½ 2013, Praveen Kumar Pendyala. 
  * Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 
  * 3.0 Unported license, http://creativecommons.org/licenses/by-nc-sa/3.0/ 
  * 
@@ -17,6 +17,7 @@ package in.co.praveenkumar.mdroid.networking;
 
 import in.co.praveenkumar.mdroid.MainActivity;
 import in.co.praveenkumar.mdroid.helpers.AppsHttpClient;
+import in.co.praveenkumar.mdroid.webservices.MoodleRestToken;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,10 +40,11 @@ import android.util.Log;
 
 public class DoLogin {
 	final String DEBUG_TAG = "NETWORKING_LOGIN";
-	
+
 	static DefaultHttpClient httpclient;
 	static Boolean isLogged = false;
 	static String htmlData = "";
+	static Boolean webservices = false;
 
 	CookieStore cookieStore;
 	String getCookie;
@@ -77,7 +79,7 @@ public class DoLogin {
 			isLogged = true;
 		else
 			isLogged = false;
-		
+
 		return isLogged;
 	}
 
@@ -90,6 +92,13 @@ public class DoLogin {
 		HttpPost httppost = new HttpPost(mURL + "/login/index.php");
 
 		try {
+			// Check webservices first
+			MoodleRestToken mrt = new MoodleRestToken(uName, pswd, mURL);
+			if (mrt.getToken() != null)
+				webservices = true;
+			else
+				webservices = false;
+
 			// Do a HttpGet first. This is to pass cookies check test.
 			httpclient.execute(httpget);
 			Log.d(DEBUG_TAG, "GET done");
