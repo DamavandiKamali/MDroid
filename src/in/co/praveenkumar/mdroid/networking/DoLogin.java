@@ -88,16 +88,20 @@ public class DoLogin {
 		Log.d(DEBUG_TAG, "Started");
 		Log.d(DEBUG_TAG, "URL:" + mURL);
 
-		HttpGet httpget = new HttpGet(mURL + "/login/index.php");
-		HttpPost httppost = new HttpPost(mURL + "/login/index.php");
-
 		try {
+			HttpGet httpget = new HttpGet(mURL + "/login/index.php");
+			HttpPost httppost = new HttpPost(mURL + "/login/index.php");
+
 			// Check webservices first
-			MoodleRestToken mrt = new MoodleRestToken(uName, pswd, mURL);
-			if (mrt.getToken().getToken() != null)
-				webservices = true;
-			else
-				webservices = false;
+			try {
+				MoodleRestToken mrt = new MoodleRestToken(uName, pswd, mURL);
+				if (mrt.getToken().getToken() != null)
+					webservices = true;
+				else
+					webservices = false;
+			} catch (Exception e) {
+				// We don't want any FCs because of webservices check!
+			}
 
 			// Do a HttpGet first. This is to pass cookies check test.
 			httpclient.execute(httpget);
@@ -183,8 +187,8 @@ public class DoLogin {
 
 		return errVal;
 	}
-	
-	public Boolean webservicesEnabled(){
+
+	public Boolean webservicesEnabled() {
 		return webservices;
 	}
 
