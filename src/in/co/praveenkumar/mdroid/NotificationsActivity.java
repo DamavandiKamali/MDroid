@@ -3,7 +3,7 @@
  * Project: MDroid
  * Created:	15-02-2014
  * 
- * © 2013-2014 Praveen Kumar Pendyala. 
+ * ï¿½ 2013-2014 Praveen Kumar Pendyala. 
  * Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 
  * 3.0 Unported license, http://creativecommons.org/licenses/by-nc-sa/3.0/ 
  * 
@@ -15,7 +15,7 @@
 
 package in.co.praveenkumar.mdroid;
 
-import in.co.praveenkumar.R;
+import in.co.praveenkumar.mdroid.legacy.R;
 import in.co.praveenkumar.mdroid.helpers.BaseActivity;
 import in.co.praveenkumar.mdroid.helpers.Database;
 import in.co.praveenkumar.mdroid.helpers.RelativeLastModified;

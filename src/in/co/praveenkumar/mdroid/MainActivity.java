@@ -15,7 +15,7 @@
 
 package in.co.praveenkumar.mdroid;
 
-import in.co.praveenkumar.R;
+import in.co.praveenkumar.mdroid.legacy.R;
 import in.co.praveenkumar.mdroid.helpers.AppsHttpClient;
 import in.co.praveenkumar.mdroid.helpers.BaseActivity;
 import in.co.praveenkumar.mdroid.helpers.Database;

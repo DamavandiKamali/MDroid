@@ -3,7 +3,7 @@
  * Project: MDroid
  * Created:	28-12-2013
  * 
- * © 2013, Praveen Kumar Pendyala. 
+ * ï¿½ 2013, Praveen Kumar Pendyala. 
  * Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 
  * 3.0 Unported license, http://creativecommons.org/licenses/by-nc-sa/3.0/ 
  * 
@@ -15,7 +15,7 @@
 
 package in.co.praveenkumar.mdroid.helpers;
 
-import in.co.praveenkumar.R;
+import in.co.praveenkumar.mdroid.legacy.R;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.View;

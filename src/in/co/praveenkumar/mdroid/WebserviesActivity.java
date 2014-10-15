@@ -1,6 +1,6 @@
 package in.co.praveenkumar.mdroid;
 
-import in.co.praveenkumar.R;
+import in.co.praveenkumar.mdroid.legacy.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;

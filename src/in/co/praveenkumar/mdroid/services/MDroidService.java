@@ -3,7 +3,7 @@
  * Project: MDroid
  * Created:	01-25-2014
  * 
- * © 2013, Praveen Kumar Pendyala. 
+ * ï¿½ 2013, Praveen Kumar Pendyala. 
  * Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 
  * 3.0 Unported license, http://creativecommons.org/licenses/by-nc-sa/3.0/ 
  * 
@@ -15,6 +15,7 @@
 
 package in.co.praveenkumar.mdroid.services;
 
+import in.co.praveenkumar.mdroid.legacy.R;
 import in.co.praveenkumar.mdroid.NotificationsActivity;
 import in.co.praveenkumar.mdroid.helpers.Database;
 import in.co.praveenkumar.mdroid.models.Course;
@@ -177,7 +178,7 @@ public class MDroidService extends Service {
 
 		NotificationCompat.Builder notification = new NotificationCompat.Builder(
 				this).setContentTitle(contentTitle).setContentText(contentText)
-				.setSmallIcon(in.co.praveenkumar.R.drawable.ic_launcher)
+				.setSmallIcon(R.drawable.ic_launcher)
 				.setSubText(subText).setContentInfo(contentInfo)
 				.setContentIntent(pIntent).setAutoCancel(autoCancel);
 		NotificationManager notificationManager = getNotificationManager();
