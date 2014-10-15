@@ -32,7 +32,7 @@ public class WebserviesActivity extends Activity {
 	}
 
 	public void showAPIs(View v) {
-		final String appPackageName = "in.co.praveenkumar.mdroid.legacy";
+		final String appPackageName = "in.co.praveenkumar.mdroid";
 		try {
 			startActivity(new Intent(Intent.ACTION_VIEW,
 					Uri.parse("market://details?id=" + appPackageName)));
